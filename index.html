@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lauren's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Lauren Claire Juzl</h1>
+      <hr />
+      <h2><em>...an overview</em></h2>
+    </div> 
+     <div class="menu">
+        <ul>
+            <li><a href="./aboutme.html">About me</a></li>
+            <li><a href="./CV.html">CV</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./contact.html">Contact Me</a></li>
+        </ul>
+     </div>
+     <div class="image">
+        <img src="whale.hello.gif" alt="a whale saying hello" />
+     </div>
+  </body>
+</html>
+
+
+
+<script>
+  $(document).ready(function() {
+$("h1").fadeOut("slow");
+$("h1").fadeIn("slow");
+$("div.icon-divider").css("cursor", "pointer");
+$("div.icon-divider").on("click", function() {
+  console.log("You've clicked me!");
+  $(this)
+    .animate({
+      left: "250px",
+      opacity: "0.5",
+      height: "150px",
+      width: "150px"
+    })
+    .slideUp(2000)
+    .slideDown(2000)
+    .animate({
+      left: "0",
+      opacity: "1",
+      height: "33px",
+      width: "100%"
+    });
+});
+$("p").on("mouseleave", function() {
+  $(this)
+    .css("color", "fuchsia")
+    .fadeOut("slow", function() {
+      $(this)
+        .text("This is magic!")
+        .fadeIn();
+    });
+});
+};);
+</script>
